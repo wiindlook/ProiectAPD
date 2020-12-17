@@ -31,7 +31,7 @@ namespace ProiectAPD
             MagazinDAO.logare(angj);
            if(MagazinDAO.login==true)
             {
-                Form1.Instance.Controls.Clear(); 
+                HomeCenter.Instance.PnlContainer.Controls.Clear(); 
             }
 
             usernameBox.Text = "";
@@ -39,6 +39,9 @@ namespace ProiectAPD
             
         }
 
-      
+        private void UClogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

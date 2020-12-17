@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace ProiectAPD
 {
-    public partial class Form1 : Form
+    public partial class HomeCenter : Form
     {
 
-        static Form1 _obj;
-        public static Form1 Instance //creaza un obiect de tip form pentru a putea acccesa functiile din form;
+        static HomeCenter _obj;
+        public static HomeCenter Instance //creaza un obiect de tip form pentru a putea acccesa functiile din form;
         {
             get
             {
                 if (_obj == null)
                 {
-                    _obj = new Form1(); 
+                    _obj = new HomeCenter();
                 }
                 return _obj;
             }
@@ -34,31 +34,29 @@ namespace ProiectAPD
             set { panelContainer = value; }
         }
 
-        public Form1()
+        public HomeCenter()
         {
             InitializeComponent();
         }
-        
 
-        
 
-        private void Form1_Load(object sender, EventArgs e)
+
+
+        private void HomeCenter_Load(object sender, EventArgs e)
         {
-            
-                  _obj = this; 
-                UClogin uc = new UClogin();
-                uc.Dock = DockStyle.Fill;
+
+
+
+            _obj = this;
+            UClogin uc = new UClogin();
+            uc.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(uc);
             panelContainer.Controls["UClogin"].BringToFront();
-            
-
-
-
 
 
         }
     }
 
-     
-    }
+
+}
 
