@@ -15,7 +15,7 @@ namespace ProiectAPD.db.daos
 
 
 
-
+       public static bool login;
 
         public static void logare(Angajati angj)
         {
@@ -33,6 +33,7 @@ namespace ProiectAPD.db.daos
             if (data.Read())
             {
                 MessageBox.Show("Logarea a avut loc cu succes","Event",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                login = true;
                     
 
             }   
