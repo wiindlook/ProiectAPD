@@ -66,13 +66,13 @@ namespace ProiectAPD
             panelButoane.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void butonActiuni_Click(object sender, EventArgs e)
         {
             _obj = this;
             ManageProduse mp = new ManageProduse();
             mp.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(mp);
-            panelContainer.Controls["welcome"].BringToFront();
+            panelContainer.Controls["ManageProduse"].BringToFront();
         }
     }
 

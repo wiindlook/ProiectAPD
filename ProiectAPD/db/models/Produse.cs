@@ -12,6 +12,7 @@ namespace ProiectAPD.db.models
         private string denumire;
         private string descriere;
         private int pret;
+        private int id;
 
         public int Cantitate
         {
@@ -58,10 +59,21 @@ namespace ProiectAPD.db.models
                 return pret;
             }
         }
+        public int Id
+        {
+            set
+            {
+                id = value;
+            }
+            get
+            {
+                return id;
+            }
+        }
 
         public override string ToString()
         {
-            return "{ denumire: \"" + denumire + "\", descriere: \"" + descriere + "\", cantiate: " + cantitate + ",pret: " + pret + " }";
+            return "{ denumire: \"" + denumire + "\", descriere: \"" + descriere + "\", cantiate: " + cantitate + ",pret: " + pret + ",id" + id +" }";
         }
     }
 }

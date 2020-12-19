@@ -13,6 +13,7 @@ namespace ProiectAPD.db.models
         private string nume;
         private string prenume;
         private string acces;
+        private int id;
 
         public string Email
         {
@@ -67,6 +68,17 @@ namespace ProiectAPD.db.models
             get
             {
                 return acces;
+            }
+        }
+        public int Id
+        {
+            set
+            {
+                id = value;
+            }
+            get
+            {
+                return id;
             }
         }
     }

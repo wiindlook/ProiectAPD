@@ -33,7 +33,7 @@ namespace ProiectAPD
             this.panelButoane = new System.Windows.Forms.Panel();
             this.tabelButoane = new System.Windows.Forms.TableLayoutPanel();
             this.butonAfisare = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.butonActiuni = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,7 +62,7 @@ namespace ProiectAPD
             this.tabelButoane.ColumnCount = 1;
             this.tabelButoane.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tabelButoane.Controls.Add(this.butonAfisare, 0, 1);
-            this.tabelButoane.Controls.Add(this.button2, 0, 2);
+            this.tabelButoane.Controls.Add(this.butonActiuni, 0, 2);
             this.tabelButoane.Controls.Add(this.button3, 0, 3);
             this.tabelButoane.Controls.Add(this.button4, 0, 4);
             this.tabelButoane.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,20 +85,20 @@ namespace ProiectAPD
             this.butonAfisare.Name = "butonAfisare";
             this.butonAfisare.Size = new System.Drawing.Size(132, 93);
             this.butonAfisare.TabIndex = 0;
-            this.butonAfisare.Text = "button1";
+            this.butonAfisare.Text = "Produse";
             this.butonAfisare.UseVisualStyleBackColor = true;
             this.butonAfisare.Click += new System.EventHandler(this.butonAfisare_Click);
             // 
-            // button2
+            // butonActiuni
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 93);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.butonActiuni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.butonActiuni.Location = new System.Drawing.Point(3, 201);
+            this.butonActiuni.Name = "butonActiuni";
+            this.butonActiuni.Size = new System.Drawing.Size(132, 93);
+            this.butonActiuni.TabIndex = 1;
+            this.butonActiuni.Text = "Actiuni";
+            this.butonActiuni.UseVisualStyleBackColor = true;
+            this.butonActiuni.Click += new System.EventHandler(this.butonActiuni_Click);
             // 
             // button3
             // 
@@ -152,7 +152,7 @@ namespace ProiectAPD
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tabelButoane;
         private System.Windows.Forms.Button butonAfisare;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butonActiuni;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }

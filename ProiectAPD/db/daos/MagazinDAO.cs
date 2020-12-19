@@ -102,6 +102,16 @@ namespace ProiectAPD.db.daos
             cmd.Parameters.AddWithValue("@cantiate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
 
+            MySqlDataReader data = cmd.ExecuteReader();
+            if (data.Read())
+            {
+                MessageBox.Show("Stergerea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Vam.login = true;
+            }
+            else
+            {
+                MessageBox.Show("Stergerea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
             if (cmd.ExecuteNonQuery() != 1)
@@ -124,11 +134,14 @@ namespace ProiectAPD.db.daos
 
             MySqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = "UPDATE highscores SET descriere=@descriere,cantiate=@cantitate,pret=@pret WHERE denumire=@denumire ";
+            cmd.CommandText = "UPDATE highscores SET denumire=@denumire, descriere=@descriere,cantiate=@cantitate,pret=@pret WHERE id=@id ";
             cmd.Parameters.AddWithValue("@denumire", prd.Denumire);
             cmd.Parameters.AddWithValue("@descriere", prd.Descriere);
             cmd.Parameters.AddWithValue("@cantiate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
+            cmd.Parameters.AddWithValue("@id", prd.Id);
+
+
 
 
             if (cmd.ExecuteNonQuery() != 1)

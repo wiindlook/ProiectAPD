@@ -29,62 +29,149 @@ namespace ProiectAPD
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabelProduse = new System.Windows.Forms.DataGridView();
+            this.denumireBox = new System.Windows.Forms.TextBox();
+            this.cantitateBox = new System.Windows.Forms.TextBox();
+            this.descriereBox = new System.Windows.Forms.TextBox();
+            this.pretBox = new System.Windows.Forms.TextBox();
+            this.butonInsereaza = new System.Windows.Forms.Button();
+            this.butonModifica = new System.Windows.Forms.Button();
+            this.butonSterge = new System.Windows.Forms.Button();
+            this.labelDenumire = new System.Windows.Forms.Label();
+            this.labelDescriere = new System.Windows.Forms.Label();
+            this.labelCantitate = new System.Windows.Forms.Label();
+            this.labelPret = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelProduse)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tabelProduse
             // 
-            this.textBox1.Location = new System.Drawing.Point(342, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 20);
-            this.textBox1.TabIndex = 0;
+            this.tabelProduse.AllowUserToAddRows = false;
+            this.tabelProduse.AllowUserToDeleteRows = false;
+            this.tabelProduse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabelProduse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelProduse.Location = new System.Drawing.Point(139, 0);
+            this.tabelProduse.Name = "tabelProduse";
+            this.tabelProduse.ReadOnly = true;
+            this.tabelProduse.Size = new System.Drawing.Size(712, 302);
+            this.tabelProduse.TabIndex = 0;
+            this.tabelProduse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelProduse_CellClick);
             // 
-            // textBox2
+            // denumireBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(342, 171);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(287, 20);
-            this.textBox2.TabIndex = 1;
+            this.denumireBox.Location = new System.Drawing.Point(221, 326);
+            this.denumireBox.Name = "denumireBox";
+            this.denumireBox.Size = new System.Drawing.Size(205, 20);
+            this.denumireBox.TabIndex = 1;
             // 
-            // textBox3
+            // cantitateBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(342, 222);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(287, 20);
-            this.textBox3.TabIndex = 2;
+            this.cantitateBox.Location = new System.Drawing.Point(550, 326);
+            this.cantitateBox.Name = "cantitateBox";
+            this.cantitateBox.Size = new System.Drawing.Size(205, 20);
+            this.cantitateBox.TabIndex = 2;
             // 
-            // textBox4
+            // descriereBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(342, 260);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(287, 20);
-            this.textBox4.TabIndex = 3;
+            this.descriereBox.Location = new System.Drawing.Point(221, 368);
+            this.descriereBox.Multiline = true;
+            this.descriereBox.Name = "descriereBox";
+            this.descriereBox.Size = new System.Drawing.Size(205, 42);
+            this.descriereBox.TabIndex = 3;
             // 
-            // button1
+            // pretBox
             // 
-            this.button1.Location = new System.Drawing.Point(446, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pretBox.Location = new System.Drawing.Point(550, 378);
+            this.pretBox.Name = "pretBox";
+            this.pretBox.Size = new System.Drawing.Size(205, 20);
+            this.pretBox.TabIndex = 4;
             // 
-            // welcome
+            // butonInsereaza
+            // 
+            this.butonInsereaza.Location = new System.Drawing.Point(221, 444);
+            this.butonInsereaza.Name = "butonInsereaza";
+            this.butonInsereaza.Size = new System.Drawing.Size(105, 50);
+            this.butonInsereaza.TabIndex = 5;
+            this.butonInsereaza.Text = "Insereaza";
+            this.butonInsereaza.UseVisualStyleBackColor = true;
+            this.butonInsereaza.Click += new System.EventHandler(this.butonInsereaza_Click);
+            // 
+            // butonModifica
+            // 
+            this.butonModifica.Location = new System.Drawing.Point(438, 444);
+            this.butonModifica.Name = "butonModifica";
+            this.butonModifica.Size = new System.Drawing.Size(106, 50);
+            this.butonModifica.TabIndex = 6;
+            this.butonModifica.Text = "Modifica";
+            this.butonModifica.UseVisualStyleBackColor = true;
+            this.butonModifica.Click += new System.EventHandler(this.butonModifica_Click);
+            // 
+            // butonSterge
+            // 
+            this.butonSterge.Location = new System.Drawing.Point(649, 444);
+            this.butonSterge.Name = "butonSterge";
+            this.butonSterge.Size = new System.Drawing.Size(106, 50);
+            this.butonSterge.TabIndex = 7;
+            this.butonSterge.Text = "Sterge";
+            this.butonSterge.UseVisualStyleBackColor = true;
+            this.butonSterge.Click += new System.EventHandler(this.butonSterge_Click);
+            // 
+            // labelDenumire
+            // 
+            this.labelDenumire.AutoSize = true;
+            this.labelDenumire.Location = new System.Drawing.Point(163, 329);
+            this.labelDenumire.Name = "labelDenumire";
+            this.labelDenumire.Size = new System.Drawing.Size(52, 13);
+            this.labelDenumire.TabIndex = 9;
+            this.labelDenumire.Text = "Denumire";
+            // 
+            // labelDescriere
+            // 
+            this.labelDescriere.AutoSize = true;
+            this.labelDescriere.Location = new System.Drawing.Point(167, 385);
+            this.labelDescriere.Name = "labelDescriere";
+            this.labelDescriere.Size = new System.Drawing.Size(52, 13);
+            this.labelDescriere.TabIndex = 10;
+            this.labelDescriere.Text = "Descriere";
+            // 
+            // labelCantitate
+            // 
+            this.labelCantitate.AutoSize = true;
+            this.labelCantitate.Location = new System.Drawing.Point(495, 329);
+            this.labelCantitate.Name = "labelCantitate";
+            this.labelCantitate.Size = new System.Drawing.Size(49, 13);
+            this.labelCantitate.TabIndex = 11;
+            this.labelCantitate.Text = "Cantitate";
+            // 
+            // labelPret
+            // 
+            this.labelPret.AutoSize = true;
+            this.labelPret.Location = new System.Drawing.Point(509, 385);
+            this.labelPret.Name = "labelPret";
+            this.labelPret.Size = new System.Drawing.Size(26, 13);
+            this.labelPret.TabIndex = 12;
+            this.labelPret.Text = "Pret";
+            // 
+            // ManageProduse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "welcome";
+            this.Controls.Add(this.labelPret);
+            this.Controls.Add(this.labelCantitate);
+            this.Controls.Add(this.labelDescriere);
+            this.Controls.Add(this.labelDenumire);
+            this.Controls.Add(this.butonSterge);
+            this.Controls.Add(this.butonModifica);
+            this.Controls.Add(this.butonInsereaza);
+            this.Controls.Add(this.pretBox);
+            this.Controls.Add(this.descriereBox);
+            this.Controls.Add(this.cantitateBox);
+            this.Controls.Add(this.denumireBox);
+            this.Controls.Add(this.tabelProduse);
+            this.Name = "ManageProduse";
             this.Size = new System.Drawing.Size(1068, 515);
+            this.Load += new System.EventHandler(this.ManageProduse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tabelProduse)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,10 +179,17 @@ namespace ProiectAPD
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView tabelProduse;
+        private System.Windows.Forms.TextBox denumireBox;
+        private System.Windows.Forms.TextBox cantitateBox;
+        private System.Windows.Forms.TextBox descriereBox;
+        private System.Windows.Forms.TextBox pretBox;
+        private System.Windows.Forms.Button butonInsereaza;
+        private System.Windows.Forms.Button butonModifica;
+        private System.Windows.Forms.Button butonSterge;
+        private System.Windows.Forms.Label labelDenumire;
+        private System.Windows.Forms.Label labelDescriere;
+        private System.Windows.Forms.Label labelCantitate;
+        private System.Windows.Forms.Label labelPret;
     }
 }

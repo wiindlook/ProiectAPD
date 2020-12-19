@@ -64,6 +64,12 @@
     <Compile Include="HomeCenter.Designer.cs">
       <DependentUpon>HomeCenter.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageProduse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageProduse.Designer.cs">
+      <DependentUpon>ManageProduse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UClogin.cs">
@@ -72,17 +78,14 @@
     <Compile Include="UClogin.Designer.cs">
       <DependentUpon>UClogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageProduse.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ManageProduse.Designer.cs">
-      <DependentUpon>ManageProduse.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AfisareTabelProduse.resx">
       <DependentUpon>AfisareTabelProduse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeCenter.resx">
       <DependentUpon>HomeCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduse.resx">
+      <DependentUpon>ManageProduse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,9 +98,6 @@
     </Compile>
     <EmbeddedResource Include="UClogin.resx">
       <DependentUpon>UClogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageProduse.resx">
-      <DependentUpon>ManageProduse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

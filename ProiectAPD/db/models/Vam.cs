@@ -10,6 +10,8 @@ namespace ProiectAPD.db.models
     class Vam
     {
         public static bool login;
+        public static string acces;
+        public static bool apasareButon;
 
        
     }
