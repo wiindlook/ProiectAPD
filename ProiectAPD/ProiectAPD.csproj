@@ -47,9 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfisareTabelProduse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AfisareTabelProduse.Designer.cs">
+      <DependentUpon>AfisareTabelProduse.cs</DependentUpon>
+    </Compile>
     <Compile Include="db\daos\MagazinDAO.cs" />
     <Compile Include="db\models\Angajati.cs" />
     <Compile Include="db\models\Produse.cs" />
+    <Compile Include="db\models\Vam.cs" />
     <Compile Include="db\utils\DBConnection.cs" />
     <Compile Include="HomeCenter.cs">
       <SubType>Form</SubType>
@@ -65,6 +72,15 @@
     <Compile Include="UClogin.Designer.cs">
       <DependentUpon>UClogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageProduse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageProduse.Designer.cs">
+      <DependentUpon>ManageProduse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AfisareTabelProduse.resx">
+      <DependentUpon>AfisareTabelProduse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeCenter.resx">
       <DependentUpon>HomeCenter.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="UClogin.resx">
       <DependentUpon>UClogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduse.resx">
+      <DependentUpon>ManageProduse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

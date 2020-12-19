@@ -3,6 +3,7 @@ using ProiectAPD.db.models;
 using ProiectAPD.db.utils;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,6 @@ namespace ProiectAPD.db.daos
     class MagazinDAO
     {
 
-
-
-       public static bool login;
 
         public static void logare(Angajati angj)
         {
@@ -33,22 +31,29 @@ namespace ProiectAPD.db.daos
             if (data.Read())
             {
                 MessageBox.Show("Logarea a avut loc cu succes","Event",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                login = true;
-                    
-
+                Vam.login = true;
             }   
             else
             {
                 MessageBox.Show("Logarea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-            
-
             con.Close();
+        }
+        public static DataTable afisare(Produse prd)
+        {
+            MySqlConnection con = DBConnection.getConnection();
+            if (con == null)
+            {
+                throw new Exception("Conexiunea la baza de date nu s-a realizat.");
+            }
 
-
-
+            string instructiune = "select *from produse";
+            MySqlDataAdapter adpt = new MySqlDataAdapter(instructiune,con);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            return dt;
+            con.Close();
+            
         }
 
 
@@ -63,17 +68,21 @@ namespace ProiectAPD.db.daos
 
             MySqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = "INSERT INTO highscores(denumire, descriere,cantiate,pret) VALUES(@denumire, @descriere,@cantiate,@pret)";
+            cmd.CommandText = "INSERT INTO produse(denumire,descriere,cantitate,pret) VALUES(@denumire,@descriere,@cantitate,@pret)";
             cmd.Parameters.AddWithValue("@denumire", prd.Denumire);
             cmd.Parameters.AddWithValue("@descriere", prd.Descriere);
-            cmd.Parameters.AddWithValue("@cantiate", prd.Cantitate);
+            cmd.Parameters.AddWithValue("@cantitate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
-
-            if (cmd.ExecuteNonQuery() != 1)
+            MySqlDataReader data = cmd.ExecuteReader();
+            if (data.Read())
             {
-                throw new Exception("Inserarea nu s-a putut face.");
+                MessageBox.Show("Inserarea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
-
+            else
+            {
+                MessageBox.Show("Inserarea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             con.Close();
         }
         public static void sterge(Produse prd)

@@ -37,23 +37,42 @@ namespace ProiectAPD
         public HomeCenter()
         {
             InitializeComponent();
+           
+            
         }
-
-
-
 
         private void HomeCenter_Load(object sender, EventArgs e)
         {
-
-
-
+            panelButoane.Hide();
             _obj = this;
-            UClogin uc = new UClogin();
-            uc.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(uc);
-            panelContainer.Controls["UClogin"].BringToFront();
+                UClogin uc = new UClogin();
+                uc.Dock = DockStyle.Fill;
+                panelContainer.Controls.Add(uc);
+                panelContainer.Controls["UClogin"].BringToFront();
+           
+        }
+    
+    private void butonAfisare_Click(object sender, EventArgs e)
+        {
+            
+            _obj = this;
+            AfisareTabelProduse atp = new AfisareTabelProduse();
+            atp.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(atp);
+            panelContainer.Controls["AfisareTabelProduse"].BringToFront();            
+        }
+         public  void afisareMeniuAngajat()
+        {
+            panelButoane.Show();
+        }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _obj = this;
+            ManageProduse mp = new ManageProduse();
+            mp.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(mp);
+            panelContainer.Controls["welcome"].BringToFront();
         }
     }
 

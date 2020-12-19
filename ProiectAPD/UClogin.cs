@@ -20,18 +20,20 @@ namespace ProiectAPD
             InitializeComponent();
         }
 
-   
+      
 
         private void butonLogin_Click(object sender, EventArgs e)
         {
+            
             Angajati angj = new Angajati();
             angj.Email = usernameBox.Text;
             angj.Parola = parolaBox.Text;
 
             MagazinDAO.logare(angj);
-           if(MagazinDAO.login==true)
-            {
-                HomeCenter.Instance.PnlContainer.Controls.Clear(); 
+            if (Vam.login==true)
+            {      
+                HomeCenter.Instance.PnlContainer.Controls.Clear();
+                HomeCenter.Instance.afisareMeniuAngajat();
             }
 
             usernameBox.Text = "";
@@ -41,7 +43,7 @@ namespace ProiectAPD
 
         private void UClogin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
