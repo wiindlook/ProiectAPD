@@ -41,11 +41,11 @@ namespace ProiectAPD.db.models
         {
             set
             {
-                denumire = value;
+                descriere = value;
             }
             get
             {
-                return denumire;
+                return descriere;
             }
         }
         public int Pret

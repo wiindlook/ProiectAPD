@@ -53,8 +53,7 @@ namespace ProiectAPD
         }
     
     private void butonAfisare_Click(object sender, EventArgs e)
-        {
-            
+        {   
             _obj = this;
             AfisareTabelProduse atp = new AfisareTabelProduse();
             atp.Dock = DockStyle.Fill;

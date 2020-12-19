@@ -36,22 +36,34 @@ namespace ProiectAPD
 
         private void butonModifica_Click(object sender, EventArgs e)
         {
-            Vam.apasareButon = true;
+            Produse prd = new Produse();
+            prd.Denumire = denumireBox.Text;
+            prd.Descriere = descriereBox.Text;
+            prd.Cantitate = int.Parse(cantitateBox.Text);
+            prd.Pret = int.Parse(pretBox.Text);
+            MagazinDAO.update(prd);
+            denumireBox.Text = "";
+            descriereBox.Text = "";
+            cantitateBox.Text = "";
+            pretBox.Text = "";
+            afisareProduse();
         }
 
         private void butonSterge_Click(object sender, EventArgs e)
         {
-            Vam.apasareButon = true;
-            if (Vam.apasareButon == true)
-            {
+            
                 Produse prd = new Produse();
                 prd.Denumire = denumireBox.Text;
                 prd.Descriere = descriereBox.Text;
                 prd.Cantitate = int.Parse(cantitateBox.Text);
                 prd.Pret = int.Parse(pretBox.Text);
                 MagazinDAO.sterge(prd);
-                afisareProduse();
-            }
+            denumireBox.Text = "";
+            descriereBox.Text = "";
+            cantitateBox.Text = "";
+            pretBox.Text = "";
+            afisareProduse();
+            
 
         }
 

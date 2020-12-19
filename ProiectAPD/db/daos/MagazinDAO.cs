@@ -76,12 +76,13 @@ namespace ProiectAPD.db.daos
             MySqlDataReader data = cmd.ExecuteReader();
             if (data.Read())
             {
-                MessageBox.Show("Inserarea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                MessageBox.Show("Inserarea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
-                MessageBox.Show("Inserarea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                MessageBox.Show("Inserarea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             con.Close();
         }
@@ -105,12 +106,13 @@ namespace ProiectAPD.db.daos
             MySqlDataReader data = cmd.ExecuteReader();
             if (data.Read())
             {
-                MessageBox.Show("Stergerea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Vam.login = true;
+                MessageBox.Show("Stergerea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
-                MessageBox.Show("Stergerea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                MessageBox.Show("Stergerea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -129,20 +131,24 @@ namespace ProiectAPD.db.daos
 
             MySqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = "UPDATE produse SET denumire=@denumire, descriere=@descriere,cantiate=@cantitate,pret=@pret WHERE id=@id ";
+            cmd.CommandText = "UPDATE produse SET denumire=@denumire, descriere=@descriere,cantitate=@cantitate,pret=@pret WHERE id=@id ";
             cmd.Parameters.AddWithValue("@denumire", prd.Denumire);
             cmd.Parameters.AddWithValue("@descriere", prd.Descriere);
             cmd.Parameters.AddWithValue("@cantitate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
             cmd.Parameters.AddWithValue("@id", prd.Id);
 
-
-
-
-            if (cmd.ExecuteNonQuery() != 1)
+            MySqlDataReader data = cmd.ExecuteReader();
+            if (data.Read())
             {
-                throw new Exception("Modificarea nu s-a putut face");
+                MessageBox.Show("Modificarea a avut loc cu succes", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Vam.login = true;
             }
+            else
+            {
+                MessageBox.Show("Modificarea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
             con.Close();
 
