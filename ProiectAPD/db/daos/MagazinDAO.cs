@@ -96,10 +96,10 @@ namespace ProiectAPD.db.daos
 
             MySqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = "DELETE FROM highscores WHERE denumire=@denumire AND descriere=@descriere AND cantiate=@cantitate AND pret=@pret";
+            cmd.CommandText = "DELETE FROM produse WHERE denumire=@denumire AND descriere=@descriere AND cantitate=@cantitate AND pret=@pret";
             cmd.Parameters.AddWithValue("@denumire", prd.Denumire);
             cmd.Parameters.AddWithValue("@descriere", prd.Descriere);
-            cmd.Parameters.AddWithValue("@cantiate", prd.Cantitate);
+            cmd.Parameters.AddWithValue("@cantitate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
 
             MySqlDataReader data = cmd.ExecuteReader();
@@ -113,11 +113,6 @@ namespace ProiectAPD.db.daos
                 MessageBox.Show("Stergerea nu a avut loc", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-
-            if (cmd.ExecuteNonQuery() != 1)
-            {
-                throw new Exception("Stergerea nu s-a putut face.");
-            }
 
             con.Close();
 
@@ -134,10 +129,10 @@ namespace ProiectAPD.db.daos
 
             MySqlCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = "UPDATE highscores SET denumire=@denumire, descriere=@descriere,cantiate=@cantitate,pret=@pret WHERE id=@id ";
+            cmd.CommandText = "UPDATE produse SET denumire=@denumire, descriere=@descriere,cantiate=@cantitate,pret=@pret WHERE id=@id ";
             cmd.Parameters.AddWithValue("@denumire", prd.Denumire);
             cmd.Parameters.AddWithValue("@descriere", prd.Descriere);
-            cmd.Parameters.AddWithValue("@cantiate", prd.Cantitate);
+            cmd.Parameters.AddWithValue("@cantitate", prd.Cantitate);
             cmd.Parameters.AddWithValue("@pret", prd.Pret);
             cmd.Parameters.AddWithValue("@id", prd.Id);
 

@@ -41,9 +41,17 @@ namespace ProiectAPD
 
         private void butonSterge_Click(object sender, EventArgs e)
         {
-           Produse prd = (Produse)tabelProduse.SelectedRows[0].DataBoundItem;
-            MagazinDAO.sterge(prd);
-            afisareProduse();
+            Vam.apasareButon = true;
+            if (Vam.apasareButon == true)
+            {
+                Produse prd = new Produse();
+                prd.Denumire = denumireBox.Text;
+                prd.Descriere = descriereBox.Text;
+                prd.Cantitate = int.Parse(cantitateBox.Text);
+                prd.Pret = int.Parse(pretBox.Text);
+                MagazinDAO.sterge(prd);
+                afisareProduse();
+            }
 
         }
 
@@ -65,20 +73,11 @@ namespace ProiectAPD
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = tabelProduse.Rows[index];
-            denumireBox.Text = selectedRow.Cells[0].Value.ToString();
-            descriereBox.Text = selectedRow.Cells[1].Value.ToString();
-            cantitateBox.Text = selectedRow.Cells[2].Value.ToString();
-            pretBox.Text = selectedRow.Cells[3].Value.ToString();
-            if(Vam.apasareButon==true)
-            {
-                Produse prd = new Produse();
-                prd.Denumire = denumireBox.Text;
-                prd.Descriere = descriereBox.Text;
-                prd.Cantitate = int.Parse(cantitateBox.Text);
-                prd.Pret = int.Parse(pretBox.Text);
-                MagazinDAO.update(prd);
-                afisareProduse();
-            }
+            denumireBox.Text = selectedRow.Cells[1].Value.ToString();
+            descriereBox.Text = selectedRow.Cells[2].Value.ToString();
+            cantitateBox.Text = selectedRow.Cells[3].Value.ToString();
+            pretBox.Text = selectedRow.Cells[4].Value.ToString();
+           
             
         }
     }
