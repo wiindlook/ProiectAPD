@@ -34,8 +34,8 @@ namespace ProiectAPD
             this.tabelButoane = new System.Windows.Forms.TableLayoutPanel();
             this.butonAfisare = new System.Windows.Forms.Button();
             this.butonActiuni = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.butonAdministratie = new System.Windows.Forms.Button();
+            this.butonSetari = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelButoane.SuspendLayout();
             this.tabelButoane.SuspendLayout();
@@ -63,8 +63,8 @@ namespace ProiectAPD
             this.tabelButoane.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tabelButoane.Controls.Add(this.butonAfisare, 0, 1);
             this.tabelButoane.Controls.Add(this.butonActiuni, 0, 2);
-            this.tabelButoane.Controls.Add(this.button3, 0, 3);
-            this.tabelButoane.Controls.Add(this.button4, 0, 4);
+            this.tabelButoane.Controls.Add(this.butonAdministratie, 0, 3);
+            this.tabelButoane.Controls.Add(this.butonSetari, 0, 4);
             this.tabelButoane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelButoane.Location = new System.Drawing.Point(0, 0);
             this.tabelButoane.Name = "tabelButoane";
@@ -100,25 +100,27 @@ namespace ProiectAPD
             this.butonActiuni.UseVisualStyleBackColor = true;
             this.butonActiuni.Click += new System.EventHandler(this.butonActiuni_Click);
             // 
-            // button3
+            // butonAdministratie
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 93);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.butonAdministratie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.butonAdministratie.Location = new System.Drawing.Point(3, 300);
+            this.butonAdministratie.Name = "butonAdministratie";
+            this.butonAdministratie.Size = new System.Drawing.Size(132, 93);
+            this.butonAdministratie.TabIndex = 2;
+            this.butonAdministratie.Text = "Administratie";
+            this.butonAdministratie.UseVisualStyleBackColor = true;
+            this.butonAdministratie.Click += new System.EventHandler(this.butonAdministratie_Click);
             // 
-            // button4
+            // butonSetari
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 399);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 93);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.butonSetari.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.butonSetari.Location = new System.Drawing.Point(3, 399);
+            this.butonSetari.Name = "butonSetari";
+            this.butonSetari.Size = new System.Drawing.Size(132, 93);
+            this.butonSetari.TabIndex = 3;
+            this.butonSetari.Text = "Setari";
+            this.butonSetari.UseVisualStyleBackColor = true;
+            this.butonSetari.Click += new System.EventHandler(this.butonSetari_Click);
             // 
             // panel1
             // 
@@ -153,7 +155,7 @@ namespace ProiectAPD
         private System.Windows.Forms.TableLayoutPanel tabelButoane;
         private System.Windows.Forms.Button butonAfisare;
         private System.Windows.Forms.Button butonActiuni;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button butonAdministratie;
+        private System.Windows.Forms.Button butonSetari;
     }
 }

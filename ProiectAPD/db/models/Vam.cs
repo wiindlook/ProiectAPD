@@ -9,10 +9,14 @@ namespace ProiectAPD.db.models
 {
     class Vam
     {
-        public static bool login;
+        public static bool loginAdmin;
+        public static bool loginAngajat;
         public static string acces;
         public static bool apasareButon;
-
+        public static int valID;
+        public static int valIdAngajat;
+        public static string rolAdmin="Administrator";
+        public static string rolAngajat = "Angajat";
        
     }
    

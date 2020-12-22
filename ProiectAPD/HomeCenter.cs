@@ -73,6 +73,28 @@ namespace ProiectAPD
             panelContainer.Controls.Add(mp);
             panelContainer.Controls["ManageProduse"].BringToFront();
         }
+
+        private void butonSetari_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butonAdministratie_Click(object sender, EventArgs e)
+        {
+            if(Vam.loginAdmin==true)
+            {
+                _obj = this;
+                ManageAngajati ma = new ManageAngajati();
+                ma.Dock = DockStyle.Fill;
+                panelContainer.Controls.Add(ma);
+                panelContainer.Controls["ManageAngajati"].BringToFront();
+            }
+            else
+                if(Vam.loginAngajat==true)
+            {
+                MessageBox.Show("Nu aveti acces la aceasta optiune!", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 
 

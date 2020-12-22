@@ -37,6 +37,7 @@ namespace ProiectAPD
         private void butonModifica_Click(object sender, EventArgs e)
         {
             Produse prd = new Produse();
+            prd.Id = Vam.valID;
             prd.Denumire = denumireBox.Text;
             prd.Descriere = descriereBox.Text;
             prd.Cantitate = int.Parse(cantitateBox.Text);
@@ -85,6 +86,7 @@ namespace ProiectAPD
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = tabelProduse.Rows[index];
+            Vam.valID= int.Parse(selectedRow.Cells[0].Value.ToString());
             denumireBox.Text = selectedRow.Cells[1].Value.ToString();
             descriereBox.Text = selectedRow.Cells[2].Value.ToString();
             cantitateBox.Text = selectedRow.Cells[3].Value.ToString();

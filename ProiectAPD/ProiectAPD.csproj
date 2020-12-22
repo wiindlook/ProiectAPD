@@ -64,6 +64,12 @@
     <Compile Include="HomeCenter.Designer.cs">
       <DependentUpon>HomeCenter.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageAngajati.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageAngajati.Designer.cs">
+      <DependentUpon>ManageAngajati.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageProduse.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeCenter.resx">
       <DependentUpon>HomeCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAngajati.resx">
+      <DependentUpon>ManageAngajati.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageProduse.resx">
       <DependentUpon>ManageProduse.cs</DependentUpon>

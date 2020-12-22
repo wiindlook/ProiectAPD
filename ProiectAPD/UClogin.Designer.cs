@@ -41,25 +41,25 @@ namespace ProiectAPD
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 7);
+            this.label4.Location = new System.Drawing.Point(346, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 78);
+            this.label4.Size = new System.Drawing.Size(300, 49);
             this.label4.TabIndex = 5;
             this.label4.Text = "Personal Autorizat";
             // 
             // parolaBox
             // 
             this.parolaBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.parolaBox.Location = new System.Drawing.Point(44, 120);
+            this.parolaBox.Location = new System.Drawing.Point(353, 172);
             this.parolaBox.Name = "parolaBox";
             this.parolaBox.PasswordChar = '*';
-            this.parolaBox.Size = new System.Drawing.Size(137, 26);
+            this.parolaBox.Size = new System.Drawing.Size(247, 26);
             this.parolaBox.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(3, 120);
+            this.label5.Location = new System.Drawing.Point(312, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 23);
             this.label5.TabIndex = 4;
@@ -68,15 +68,15 @@ namespace ProiectAPD
             // usernameBox
             // 
             this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.usernameBox.Location = new System.Drawing.Point(44, 88);
+            this.usernameBox.Location = new System.Drawing.Point(353, 140);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(137, 26);
+            this.usernameBox.Size = new System.Drawing.Size(247, 26);
             this.usernameBox.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.Location = new System.Drawing.Point(3, 84);
+            this.label6.Location = new System.Drawing.Point(310, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 30);
             this.label6.TabIndex = 3;
@@ -86,9 +86,9 @@ namespace ProiectAPD
             // 
             this.butonLogin.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.butonLogin.Font = new System.Drawing.Font("Garamond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butonLogin.Location = new System.Drawing.Point(46, 152);
+            this.butonLogin.Location = new System.Drawing.Point(393, 213);
             this.butonLogin.Name = "butonLogin";
-            this.butonLogin.Size = new System.Drawing.Size(137, 43);
+            this.butonLogin.Size = new System.Drawing.Size(178, 43);
             this.butonLogin.TabIndex = 6;
             this.butonLogin.Text = "Log In";
             this.butonLogin.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@ namespace ProiectAPD
             this.Controls.Add(this.butonLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Name = "UClogin";
-            this.Size = new System.Drawing.Size(230, 476);
+            this.Size = new System.Drawing.Size(1222, 656);
             this.Load += new System.EventHandler(this.UClogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

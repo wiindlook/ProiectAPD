@@ -14,23 +14,23 @@ namespace ProiectAPD
 {
     public partial class UClogin : UserControl
     {
-        
+
         public UClogin()
         {
             InitializeComponent();
         }
 
-      
+
 
         private void butonLogin_Click(object sender, EventArgs e)
         {
-            
+
             Angajati angj = new Angajati();
             angj.Email = usernameBox.Text;
             angj.Parola = parolaBox.Text;
 
             MagazinDAO.logare(angj);
-            if (Vam.login==true)
+            if (Vam.loginAdmin == true||Vam.loginAngajat==true)
             {      
                 HomeCenter.Instance.PnlContainer.Controls.Clear();
                 HomeCenter.Instance.afisareMeniuAngajat();

@@ -14,66 +14,10 @@ namespace ProiectAPD.db.models
         private int pret;
         private int id;
 
-        public int Cantitate
-        {
-            set
-            {
-                cantitate = value;
-            }
-            get
-            {
-                return cantitate;
-            }
-        }
-
-        public string Denumire
-        {
-            set
-            {
-                denumire = value;
-            }
-            get
-            {
-                return denumire;
-            }
-        }
-        public string Descriere
-        {
-            set
-            {
-                descriere = value;
-            }
-            get
-            {
-                return descriere;
-            }
-        }
-        public int Pret
-        {
-            set
-            {
-                pret = value;
-            }
-            get
-            {
-                return pret;
-            }
-        }
-        public int Id
-        {
-            set
-            {
-                id = value;
-            }
-            get
-            {
-                return id;
-            }
-        }
-
-        public override string ToString()
-        {
-            return "{ denumire: \"" + denumire + "\", descriere: \"" + descriere + "\", cantiate: " + cantitate + ",pret: " + pret + ",id" + id +" }";
-        }
+        public int Cantitate { get => cantitate; set => cantitate = value; }
+        public string Denumire { get => denumire; set => denumire = value; }
+        public string Descriere { get => descriere; set => descriere = value; }
+        public int Pret { get => pret; set => pret = value; }
+        public int Id { get => id; set => id = value; }
     }
 }
