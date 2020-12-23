@@ -44,6 +44,7 @@ namespace ProiectAPD
         private void HomeCenter_Load(object sender, EventArgs e)
         {
             panelButoane.Hide();
+            panelSus.Hide();
             _obj = this;
                 UClogin uc = new UClogin();
                 uc.Dock = DockStyle.Fill;
@@ -60,9 +61,10 @@ namespace ProiectAPD
             panelContainer.Controls.Add(atp);
             panelContainer.Controls["AfisareTabelProduse"].BringToFront();            
         }
-         public  void afisareMeniuAngajat()
+         public  void afisareMeniu()
         {
             panelButoane.Show();
+            panelSus.Show();
         }
 
         private void butonActiuni_Click(object sender, EventArgs e)
@@ -76,7 +78,11 @@ namespace ProiectAPD
 
         private void butonSetari_Click(object sender, EventArgs e)
         {
-
+            _obj = this;
+            Setari set = new Setari();
+            set.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(set);
+            panelContainer.Controls["Setari"].BringToFront();
         }
 
         private void butonAdministratie_Click(object sender, EventArgs e)

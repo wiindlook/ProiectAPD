@@ -100,5 +100,10 @@ namespace ProiectAPD
             prenumeBox.Text = selectedRow.Cells[4].Value.ToString();
             comboBoxGradAcces.Text= selectedRow.Cells[5].Value.ToString();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

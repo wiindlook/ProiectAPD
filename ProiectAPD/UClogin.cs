@@ -33,7 +33,7 @@ namespace ProiectAPD
             if (Vam.loginAdmin == true||Vam.loginAngajat==true)
             {      
                 HomeCenter.Instance.PnlContainer.Controls.Clear();
-                HomeCenter.Instance.afisareMeniuAngajat();
+                HomeCenter.Instance.afisareMeniu();
             }
 
             usernameBox.Text = "";

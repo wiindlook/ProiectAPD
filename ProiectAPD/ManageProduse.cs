@@ -18,9 +18,12 @@ namespace ProiectAPD
         {
             InitializeComponent();
         }
+        
 
         private void butonInsereaza_Click(object sender, EventArgs e)
         {
+           
+          
             Produse prd = new Produse();
             prd.Denumire = denumireBox.Text;
             prd.Descriere = descriereBox.Text;

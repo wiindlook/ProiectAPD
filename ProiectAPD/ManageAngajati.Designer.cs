@@ -67,7 +67,7 @@ namespace ProiectAPD
             // 
             // prenumeBox
             // 
-            this.prenumeBox.Location = new System.Drawing.Point(229, 382);
+            this.prenumeBox.Location = new System.Drawing.Point(277, 370);
             this.prenumeBox.Name = "prenumeBox";
             this.prenumeBox.Size = new System.Drawing.Size(177, 20);
             this.prenumeBox.TabIndex = 3;
@@ -119,7 +119,7 @@ namespace ProiectAPD
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 345);
+            this.label1.Location = new System.Drawing.Point(120, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 9;
@@ -128,7 +128,7 @@ namespace ProiectAPD
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(341, 338);
+            this.label2.Location = new System.Drawing.Point(363, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 10;
@@ -137,7 +137,7 @@ namespace ProiectAPD
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(612, 345);
+            this.label3.Location = new System.Drawing.Point(632, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 11;
@@ -146,11 +146,12 @@ namespace ProiectAPD
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(176, 382);
+            this.label4.Location = new System.Drawing.Point(222, 374);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Prenume";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comboBoxGradAcces
             // 
@@ -158,7 +159,7 @@ namespace ProiectAPD
             this.comboBoxGradAcces.Items.AddRange(new object[] {
             "Administrator",
             "Angajat"});
-            this.comboBoxGradAcces.Location = new System.Drawing.Point(673, 374);
+            this.comboBoxGradAcces.Location = new System.Drawing.Point(589, 371);
             this.comboBoxGradAcces.Name = "comboBoxGradAcces";
             this.comboBoxGradAcces.Size = new System.Drawing.Size(177, 21);
             this.comboBoxGradAcces.TabIndex = 13;
@@ -167,7 +168,7 @@ namespace ProiectAPD
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(604, 377);
+            this.label5.Location = new System.Drawing.Point(520, 374);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 14;

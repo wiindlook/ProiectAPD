@@ -36,7 +36,7 @@ namespace ProiectAPD
             this.butonActiuni = new System.Windows.Forms.Button();
             this.butonAdministratie = new System.Windows.Forms.Button();
             this.butonSetari = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSus = new System.Windows.Forms.Panel();
             this.panelButoane.SuspendLayout();
             this.tabelButoane.SuspendLayout();
             this.SuspendLayout();
@@ -122,20 +122,21 @@ namespace ProiectAPD
             this.butonSetari.UseVisualStyleBackColor = true;
             this.butonSetari.Click += new System.EventHandler(this.butonSetari_Click);
             // 
-            // panel1
+            // panelSus
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(138, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 100);
-            this.panel1.TabIndex = 2;
+            this.panelSus.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelSus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSus.Location = new System.Drawing.Point(138, 0);
+            this.panelSus.Name = "panelSus";
+            this.panelSus.Size = new System.Drawing.Size(1068, 100);
+            this.panelSus.TabIndex = 2;
             // 
             // HomeCenter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1206, 617);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSus);
             this.Controls.Add(this.panelButoane);
             this.Controls.Add(this.panelContainer);
             this.Name = "HomeCenter";
@@ -151,7 +152,7 @@ namespace ProiectAPD
 
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelButoane;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelSus;
         private System.Windows.Forms.TableLayoutPanel tabelButoane;
         private System.Windows.Forms.Button butonAfisare;
         private System.Windows.Forms.Button butonActiuni;
