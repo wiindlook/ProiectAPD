@@ -34,7 +34,7 @@ namespace ProiectAPD
         {
             Angajati angj = new Angajati();
             angj.Email = emailBox.Text;
-            angj.Parola = parolaBox.Text;
+            angj.Parola = Vam.Encode(parolaBox.Text);
             angj.Nume = numeBox.Text;
             angj.Prenume = prenumeBox.Text;
             angj.Acces = comboBoxGradAcces.GetItemText(comboBoxGradAcces.SelectedItem);
@@ -53,7 +53,7 @@ namespace ProiectAPD
             Angajati angj = new Angajati();
             angj.Id = Vam.valIdAngajat;
             angj.Email = emailBox.Text;
-            angj.Parola = parolaBox.Text;
+            angj.Parola =Vam.Encode(parolaBox.Text);
             angj.Nume = numeBox.Text;
             angj.Prenume = prenumeBox.Text;
             angj.Acces = comboBoxGradAcces.GetItemText(comboBoxGradAcces.SelectedItem);
@@ -80,7 +80,6 @@ namespace ProiectAPD
             parolaBox.Text = "";
             numeBox.Text = "";
             prenumeBox.Text = "";
-            angj.Email = "";
             arataAngajati();
         }
 

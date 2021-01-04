@@ -31,7 +31,7 @@ namespace ProiectAPD
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UClogin));
             this.label4 = new System.Windows.Forms.Label();
-            this.parolaBox = new System.Windows.Forms.TextBox();
+            this.parolaLogare = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@ namespace ProiectAPD
             this.label4.TabIndex = 5;
             this.label4.Text = "Personal Autorizat";
             // 
-            // parolaBox
+            // parolaLogare
             // 
-            this.parolaBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.parolaBox.Location = new System.Drawing.Point(353, 172);
-            this.parolaBox.Name = "parolaBox";
-            this.parolaBox.PasswordChar = '*';
-            this.parolaBox.Size = new System.Drawing.Size(247, 26);
-            this.parolaBox.TabIndex = 8;
+            this.parolaLogare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.parolaLogare.Location = new System.Drawing.Point(353, 172);
+            this.parolaLogare.Name = "parolaLogare";
+            this.parolaLogare.PasswordChar = '*';
+            this.parolaLogare.Size = new System.Drawing.Size(247, 26);
+            this.parolaLogare.TabIndex = 8;
             // 
             // label5
             // 
@@ -101,7 +101,7 @@ namespace ProiectAPD
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.parolaBox);
+            this.Controls.Add(this.parolaLogare);
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.butonLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
@@ -116,7 +116,7 @@ namespace ProiectAPD
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox parolaBox;
+        private System.Windows.Forms.TextBox parolaLogare;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label label6;

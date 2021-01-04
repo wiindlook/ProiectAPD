@@ -15,71 +15,11 @@ namespace ProiectAPD.db.models
         private string acces;
         private int id;
 
-        public string Email
-        {
-            set
-            {
-                email = value;
-            }
-            get
-            {
-                return email;
-            }
-        }
-        public string Parola
-        {
-            set
-            {
-                parola = value;
-            }
-            get
-            {
-                return parola;
-            }
-        }
-        public string Nume
-        {
-            set
-            {
-                nume = value;
-            }
-            get
-            {
-                return nume;
-            }
-        }
-        public string Prenume
-        {
-            set
-            {
-                prenume = value;
-            }
-            get
-            {
-                return prenume;
-            }
-        }
-        public string Acces
-        {
-            set
-            {
-                acces = value;
-            }
-            get
-            {
-                return acces;
-            }
-        }
-        public int Id
-        {
-            set
-            {
-                id = value;
-            }
-            get
-            {
-                return id;
-            }
-        }
+        public string Email { get => email; set => email = value; }
+        public string Parola { get => parola; set => parola = value; }
+        public string Nume { get => nume; set => nume = value; }
+        public string Prenume { get => prenume; set => prenume = value; }
+        public string Acces { get => acces; set => acces = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

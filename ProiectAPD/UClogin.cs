@@ -27,18 +27,20 @@ namespace ProiectAPD
 
             Angajati angj = new Angajati();
             angj.Email = usernameBox.Text;
-            angj.Parola = parolaBox.Text;
+            angj.Parola = Vam.Encode(parolaLogare.Text);
 
             MagazinDAO.logare(angj);
-            if (Vam.loginAdmin == true||Vam.loginAngajat==true)
-            {      
-                HomeCenter.Instance.PnlContainer.Controls.Clear();
-                HomeCenter.Instance.afisareMeniu();
-            }
+                if (Vam.loginAdmin == true || Vam.loginAngajat == true)
+                {
+                    HomeCenter.Instance.PnlContainer.Controls.Clear();
+                    HomeCenter.Instance.afisareMeniu();
+                }
+            
 
             usernameBox.Text = "";
-            parolaBox.Text = "";
-            
+            parolaLogare.Text = "";
+          
+
         }
 
         private void UClogin_Load(object sender, EventArgs e)
