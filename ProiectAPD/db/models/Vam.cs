@@ -18,6 +18,7 @@ namespace ProiectAPD.db.models
         public static int valIdAngajat;
         public static string rolAdmin="Administrator";
         public static string rolAngajat = "Angajat";
+        public static bool logout;
 
         public static string Encode(string original)
         {

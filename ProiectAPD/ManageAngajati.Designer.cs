@@ -50,6 +50,7 @@ namespace ProiectAPD
             // 
             this.tabelAngajati.AllowUserToAddRows = false;
             this.tabelAngajati.AllowUserToDeleteRows = false;
+            this.tabelAngajati.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelAngajati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelAngajati.Location = new System.Drawing.Point(158, 0);
             this.tabelAngajati.Name = "tabelAngajati";

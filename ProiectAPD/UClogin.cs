@@ -46,6 +46,7 @@ namespace ProiectAPD
         private void UClogin_Load(object sender, EventArgs e)
         {
             
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace ProiectAPD
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeCenter));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelButoane = new System.Windows.Forms.Panel();
             this.tabelButoane = new System.Windows.Forms.TableLayoutPanel();
@@ -37,8 +38,11 @@ namespace ProiectAPD
             this.butonAdministratie = new System.Windows.Forms.Button();
             this.butonSetari = new System.Windows.Forms.Button();
             this.panelSus = new System.Windows.Forms.Panel();
+            this.butonLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelButoane.SuspendLayout();
             this.tabelButoane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer
@@ -61,10 +65,12 @@ namespace ProiectAPD
             // 
             this.tabelButoane.ColumnCount = 1;
             this.tabelButoane.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tabelButoane.Controls.Add(this.butonLogout, 0, 5);
             this.tabelButoane.Controls.Add(this.butonAfisare, 0, 1);
             this.tabelButoane.Controls.Add(this.butonActiuni, 0, 2);
             this.tabelButoane.Controls.Add(this.butonAdministratie, 0, 3);
             this.tabelButoane.Controls.Add(this.butonSetari, 0, 4);
+            this.tabelButoane.Controls.Add(this.pictureBox1, 0, 0);
             this.tabelButoane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabelButoane.Location = new System.Drawing.Point(0, 0);
             this.tabelButoane.Name = "tabelButoane";
@@ -131,6 +137,27 @@ namespace ProiectAPD
             this.panelSus.Size = new System.Drawing.Size(1068, 100);
             this.panelSus.TabIndex = 2;
             // 
+            // butonLogout
+            // 
+            this.butonLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.butonLogout.Location = new System.Drawing.Point(3, 498);
+            this.butonLogout.Name = "butonLogout";
+            this.butonLogout.Size = new System.Drawing.Size(132, 116);
+            this.butonLogout.TabIndex = 4;
+            this.butonLogout.Text = "Log Out";
+            this.butonLogout.UseVisualStyleBackColor = true;
+            this.butonLogout.Click += new System.EventHandler(this.butonLogout_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 93);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // HomeCenter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +171,7 @@ namespace ProiectAPD
             this.Load += new System.EventHandler(this.HomeCenter_Load);
             this.panelButoane.ResumeLayout(false);
             this.tabelButoane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +186,7 @@ namespace ProiectAPD
         private System.Windows.Forms.Button butonActiuni;
         private System.Windows.Forms.Button butonAdministratie;
         private System.Windows.Forms.Button butonSetari;
+        private System.Windows.Forms.Button butonLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

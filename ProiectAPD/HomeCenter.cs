@@ -101,6 +101,31 @@ namespace ProiectAPD
                 MessageBox.Show("Nu aveti acces la aceasta optiune!", "Event", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void butonLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult resDiag = MessageBox.Show("Esti sigur ca vrei sa te deloghezi?",
+                                "DELOGARE", MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
+            if (resDiag == DialogResult.OK)
+            {
+                panelButoane.Hide();
+                panelSus.Hide();
+                _obj = this;
+                UClogin uc = new UClogin();
+                uc.Dock = DockStyle.Fill;
+                panelContainer.Controls.Add(uc);
+                panelContainer.Controls["UClogin"].BringToFront();
+            }
+            if (resDiag == DialogResult.Cancel)
+            {
+                return;
+            }
+
+
+      
+            
+        }
     }
 
 
